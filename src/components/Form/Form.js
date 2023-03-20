@@ -1,5 +1,4 @@
 // *Form using the Formik library
-
 import { Formik, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import PropTypes from 'prop-types';
@@ -25,7 +24,8 @@ const userSchema = object({
     .required(),
 });
 
-export default function ContactForm({ onSubmit }) {
+export default function ContactForm({onSubmit}) {
+
   function handleSubmit({ name, number }, { resetForm }) {
     onSubmit(name, number);
     resetForm();

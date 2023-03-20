@@ -5,7 +5,8 @@ export const FormBox = styled(Form)`
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-
+  width: 260px;
+  
   background: white;
   border-radius: 30px;
 
