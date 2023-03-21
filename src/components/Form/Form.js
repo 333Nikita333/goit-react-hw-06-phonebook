@@ -24,8 +24,7 @@ const userSchema = object({
     .required(),
 });
 
-export default function ContactForm({onSubmit}) {
-
+export default function ContactForm({ onSubmit }) {
   function handleSubmit({ name, number }, { resetForm }) {
     onSubmit(name, number);
     resetForm();

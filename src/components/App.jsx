@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts} from 'redux/selectors';
+import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/contactsSlice';
 import Form from './Form';
 import Filter from './Filter';
@@ -12,17 +12,17 @@ export default function App() {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
-  function notifiesAlert(nameContact) {
-    return toast.error(`${nameContact} is already in contacts.`);
+  function notifiesAlert(numberContact) {
+    return toast.error(`${numberContact} is already in contacts.`);
   }
 
-  function checkСontact(nameContact) {
-    return contacts.some(contact => contact.name === nameContact);
+  function checkСontact(newNumber) {
+    return contacts.some(contact => contact.number === newNumber);
   }
 
   function onSubmit(name, number) {
-    checkСontact(name)
-      ? notifiesAlert(name)
+    checkСontact(number)
+      ? notifiesAlert(number)
       : dispatch(addContact(name, number));
   }
 
