@@ -15,7 +15,7 @@ export default function App() {
   function notifiesAlert(numberContact) {
     return toast.error(`${numberContact} is already in contacts.`);
   }
-
+console.log(contacts)
   function checkСontact(newNumber) {
     return contacts.some(contact => contact.number === newNumber);
   }
